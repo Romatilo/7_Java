@@ -12,6 +12,7 @@ public class Main {
 //        Task2.hello();
         int[] array = new int[] {1,1,1,1,1,0,0,1,1,1,1};
 
+
         System.out.println(Task3.getMaxOneCount(array));
     }
 }
