@@ -1,11 +1,11 @@
-package lesson1.task;
+package seminars.task;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.chrono.ChronoLocalDateTime;
 import java.util.Scanner;
 
-public class Task2 {
+public class Task2_Good_time_of_the_day {
     public static void hello() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя: ");
