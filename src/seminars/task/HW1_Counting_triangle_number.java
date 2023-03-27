@@ -9,6 +9,7 @@ public class HW1_Counting_triangle_number {
     /// Метод ввода числа с клавиатуры
     public static int getNumber() {
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите целое число -> ");
         int number = scanner.nextInt();
         return number;
     }

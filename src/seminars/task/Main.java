@@ -10,16 +10,14 @@ public class Main {
 
         // Задачи 1 и 2 (нахождение треугольного числа и факториала):
         System.out.println("Задачи на вычисление треугольного числа и факториала");
-        System.out.print("Введите целое число: ");
         int inputNumber = HW1_Counting_triangle_number.getNumber();
         System.out.println("Треугольное число: " + HW1_Counting_triangle_number.getTriangleNumber(inputNumber));
         System.out.println("Факториал числа: " + HW1_Counting_triangle_number.getFactorial(inputNumber));
 
         // Задача 3 (Вывод списка простых чисел до числа N)
         System.out.println("\nЗадача на вывод простых чисел до числа N");
-        System.out.print("Введите число N: ");
         int inputMaxNumber = HW1_Counting_triangle_number.getNumber();
-        System.out.println("Узрите список целых чисел до числа N");
+        System.out.println("Узрите список простых чисел до числа N");
         HW3_Printing_prime_numbers.printPrimeNumbers(inputMaxNumber);
 
         // Задача 4 (Простейший калькулятор)
