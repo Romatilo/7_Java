@@ -7,7 +7,23 @@ public class Main {
 //        Task2_Good_time_of_the_day.hello();
 //        int[] array = new int[] {1,1,1,1,1,0,0,1,1,1,1};
 //        System.out.println(Task3_Counting_1_in_a_row_in_array.getMaxOneCount(array));
-        System.out.println(HW1_Counting_triangle_number.getTriangleNumber());
-        System.out.println(HW1_Counting_triangle_number.getFactorial());
+
+        // Задачи 1 и 2 (нахождение треугольного числа и факториала):
+        System.out.println("Задачи на вычисление треугольного числа и факториала");
+        System.out.print("Введите целое число: ");
+        int inputNumber = HW1_Counting_triangle_number.getNumber();
+        System.out.println("Треугольное число: " + HW1_Counting_triangle_number.getTriangleNumber(inputNumber));
+        System.out.println("Факториал числа: " + HW1_Counting_triangle_number.getFactorial(inputNumber));
+
+        // Задача 3 (Вывод списка простых чисел до числа N)
+        System.out.println("\nЗадача на вывод простых чисел до числа N");
+        System.out.print("Введите число N: ");
+        int inputMaxNumber = HW1_Counting_triangle_number.getNumber();
+        System.out.println("Узрите список целых чисел до числа N");
+        HW3_Printing_prime_numbers.printPrimeNumbers(inputMaxNumber);
+
+        // Задача 4 (Простейший калькулятор)
+        System.out.println("\nЗадача на реализацию простейшего калькулятора");
+        System.out.println(HW4_Calculator.getResult());
     }
 }
