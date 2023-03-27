@@ -1,4 +1,8 @@
-package seminars.task;
+package seminars;
+
+import seminars.Homework.HW1_Counting_triangle_number;
+import seminars.Homework.HW3_Printing_prime_numbers;
+import seminars.Homework.HW4_Calculator;
 
 public class Main {
     public static void main(String[] args) {
