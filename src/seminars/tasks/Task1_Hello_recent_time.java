@@ -1,4 +1,4 @@
-package seminars.task;
+package seminars.tasks;
 
 import java.time.LocalDateTime;
 

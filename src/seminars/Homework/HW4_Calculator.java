@@ -1,6 +1,6 @@
 // Реализовать простой калькулятор
 
-package seminars.task;
+package seminars.Homework;
 
 import java.util.Scanner;
 public class HW4_Calculator {

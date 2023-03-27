@@ -1,7 +1,7 @@
 //Вывести все простые числа от 1 до 1000 простое число - то число которое делится
 //без остатка только на 1 и на само себя (1 - это не простое число);
 
-package seminars.task;
+package seminars.Homework;
 
 public class HW3_Printing_prime_numbers {
 
