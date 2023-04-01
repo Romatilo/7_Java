@@ -5,7 +5,7 @@ import java.time.LocalTime;
 import java.time.chrono.ChronoLocalDateTime;
 import java.util.Scanner;
 
-public class Task2_Good_time_of_the_day {
+public class GoodTimeOfTheDay {
     public static void hello() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя: ");

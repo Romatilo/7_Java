@@ -1,9 +1,9 @@
 // Реализовать простой калькулятор
 
-package seminars.Homework;
+package seminars.homework.exercises;
 
 import java.util.Scanner;
-public class HW4_Calculator {
+public class Calculator {
 
     /// Метод ввода числа double
     public static double getDoubleNumber() {
@@ -23,10 +23,10 @@ public class HW4_Calculator {
     /// Метод вычисления операции
     public static double getResult() {
         System.out.print("Введите число A -> ");
-        double numberA = HW4_Calculator.getDoubleNumber();
-        String action = HW4_Calculator.getOperator();
+        double numberA = Calculator.getDoubleNumber();
+        String action = Calculator.getOperator();
         System.out.print("Введите число B -> ");
-        double numberB = HW4_Calculator.getDoubleNumber();
+        double numberB = Calculator.getDoubleNumber();
         double result = -1;
 
         switch (action) {

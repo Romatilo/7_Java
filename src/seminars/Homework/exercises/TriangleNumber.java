@@ -1,11 +1,11 @@
 //Вычислить n-ое треугольного число (сумма чисел от 1 до n),
 //        n! (произведение чисел от 1 до n)
 
-package seminars.Homework;
+package seminars.homework.exercises;
 
 import java.util.Scanner;
 
-public class HW1_Counting_triangle_number {
+public class TriangleNumber {
     /// Метод ввода числа с клавиатуры
     public static int getNumber() {
         Scanner scanner = new Scanner(System.in);
