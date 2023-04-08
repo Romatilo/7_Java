@@ -1,4 +1,4 @@
-package seminars.tasks;
+package seminars.tasks.exercises;
 
 //Дан массив двоичных чисел, например [1,1,0,1,1,1],
 //        вывести максимальное количество подряд идущих 1.
