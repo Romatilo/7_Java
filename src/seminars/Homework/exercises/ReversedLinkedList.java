@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 
 public class ReversedLinkedList {
-    public static void reversingLL() {
+    public static void reversingLinkedList() {
 
         LinkedList<String> givenList = new LinkedList<>();
 
@@ -21,4 +21,3 @@ public class ReversedLinkedList {
         System.out.println("Список после переворота: " + givenList);
     }
 }
-
