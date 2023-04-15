@@ -1,4 +1,5 @@
-// Реализуйте структуру телефонной книги с помощью HashMap, учитывая, что 1 человек может иметь несколько телефонов.
+// Реализуйте структуру телефонной книги с помощью HashMap, учитывая,
+// что 1 человек может иметь несколько телефонов.
 
 package seminars.homework.exercises;
 
@@ -15,7 +16,8 @@ public class PhoneBook {
      */
     public void addRecord(PhoneData pd){
         // Приводим ключ к нижнему регистру, пробелы убираем за ненадобностью, т.к. все данные хранятся в классе PhoneData
-        phoneDataBase.putIfAbsent(pd.firstName.toLowerCase() + pd.lastName.toLowerCase(), pd);
+        phoneDataBase.putIfAbsent(pd.getFirstName().toLowerCase() + pd.lastName.toLowerCase(), pd);
+        System.out.println(phoneDataBase);
     }
 
     /**
@@ -28,6 +30,6 @@ public class PhoneBook {
         if (phoneDataBase.containsKey(firstName.toLowerCase() + lastName.toLowerCase()))
             return phoneDataBase.get(firstName.toLowerCase() + lastName.toLowerCase());
         else
-            throw new RuntimeException("Запись не найдена!");
+            throw new RuntimeException("Нет такого абонента!");
     }
 }
