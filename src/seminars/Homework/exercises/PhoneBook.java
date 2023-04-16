@@ -1,45 +1,42 @@
-// Реализуйте структуру телефонной книги с помощью HashMap, учитывая,
-// что 1 человек может иметь несколько телефонов.
-
 package seminars.homework.exercises;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class PhoneBook {
+
     public static Map<String, PhoneData> phoneDataBase = new HashMap<>();
 
-
     /**
-     * Метод для добавления записи в телефонную книгу
-     * @param pd Данные с записями по данному человеку
+     * Метод добавления записи в телефонную книгу.
+     * @param phoneData - данные абонента, добавляемые в телефонную книгу
      */
-    public void addRecord(PhoneData pd){
-        // Приводим ключ к нижнему регистру
-        phoneDataBase.putIfAbsent(pd.getFirstName().toLowerCase() + pd.lastName.toLowerCase(), pd);
-        System.out.println(phoneDataBase);
+    public void addRecord (PhoneData phoneData){
+        phoneDataBase.putIfAbsent(phoneData.firstName.toLowerCase() + phoneData.surName.toLowerCase(), phoneData);
     }
 
     /**
-     * Метод печати телефонной книги
+     * Метод печати
      */
-    public static <phoneDataBase> void printPhoneBook(phoneDataBase pd) {
-        // Print keys
-        for (String i : phoneDataBase.keySet()) System.out.println(i);
+    @Override
+    public String toString() {
+        return "TempData{" +
+                "Phone'" + PhoneData.firstName + '\'' +
+                ", userLastName='" + PhoneData.surName + '\'' +
+                ", number='" + PhoneData.phoneNumber;
     }
 
 
     /**
-     * Метод возвращает данные человека по Фамилии и Имени
+     * Метод возвращает номер телефона абонента по имени и фамилии.
      * @param firstName Имя
-     * @param lastName Фамилия
-     * @return
+     * @param surName Фамилия
      */
-    public PhoneData getRecord(String firstName, String lastName){
-        if (phoneDataBase.containsKey(firstName.toLowerCase() + lastName.toLowerCase()))
-            return phoneDataBase.get(firstName.toLowerCase() + lastName.toLowerCase());
-        else
-            throw new RuntimeException("Нет такого абонента!");
+    public PhoneData getRecord (String firstName, String surName){
+        if (phoneDataBase.containsKey(firstName.toLowerCase() + surName.toLowerCase())) {
+            return (phoneDataBase.get(firstName.toLowerCase() + surName.toLowerCase()));
+        }
+        else throw new RuntimeException("Такого абонента нет в телефонной книге");
+
     }
 }
