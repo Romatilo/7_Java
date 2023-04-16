@@ -5,38 +5,29 @@ import java.util.Map;
 
 public class PhoneBook {
 
-    public static Map<String, PhoneData> phoneDataBase = new HashMap<>();
+    public  Map<String, PhoneData> phoneDataBase = new HashMap<>();
 
     /**
      * Метод добавления записи в телефонную книгу.
+     *
      * @param phoneData - данные абонента, добавляемые в телефонную книгу
      */
-    public void addRecord (PhoneData phoneData){
+    public void addRecord(PhoneData phoneData) {
         phoneDataBase.putIfAbsent(phoneData.firstName.toLowerCase() + phoneData.surName.toLowerCase(), phoneData);
     }
 
     /**
-     * Метод печати
-     */
-    @Override
-    public String toString() {
-        return "TempData{" +
-                "Phone'" + PhoneData.firstName + '\'' +
-                ", userLastName='" + PhoneData.surName + '\'' +
-                ", number='" + PhoneData.phoneNumber;
-    }
-
-
-    /**
      * Метод возвращает номер телефона абонента по имени и фамилии.
+     *
      * @param firstName Имя
-     * @param surName Фамилия
+     * @param surName   Фамилия
      */
-    public PhoneData getRecord (String firstName, String surName){
+    public PhoneData getRecord(String firstName, String surName) {
         if (phoneDataBase.containsKey(firstName.toLowerCase() + surName.toLowerCase())) {
             return (phoneDataBase.get(firstName.toLowerCase() + surName.toLowerCase()));
+        } else {
+            throw new RuntimeException("Такого абонента нет в телефонной книге");
         }
-        else throw new RuntimeException("Такого абонента нет в телефонной книге");
 
     }
 }

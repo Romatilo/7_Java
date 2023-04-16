@@ -1,6 +1,16 @@
 package seminars.homework;
 
 import seminars.homework.exercises.*;
+import seminars.homework.exercises.BubbleSort;
+import seminars.homework.exercises.Calculator;
+import seminars.homework.exercises.DeleteEven;
+import seminars.homework.exercises.ListQueue;
+import seminars.homework.exercises.MergeSort;
+import seminars.homework.exercises.MinMidMaxNumber;
+import seminars.homework.exercises.ParseJson;
+import seminars.homework.exercises.PrimeNumbers;
+import seminars.homework.exercises.ReversedLinkedList;
+import seminars.homework.exercises.TriangleNumber;
 
 import java.io.IOException;
 import java.util.Arrays;
