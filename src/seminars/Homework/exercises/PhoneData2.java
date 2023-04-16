@@ -1,29 +1,28 @@
 package seminars.homework.exercises;
 
-import java.util.Collection;
+public class PhoneData2 {
 
-public class PhoneData {
-    public PhoneData(String initFirstName, String initLastName, String initPhoneNumber) {
+    public PhoneData2(String initFirstName, String initLastName, String initPhoneNumber) {
+
         firstName = initFirstName;
         lastName = initLastName;
         phoneNumber = initPhoneNumber;
+
     }
+
     /**
      * Имя
      */
-    private String firstName;
+    public String firstName;
+
     /**
      * Фамилия
      */
     public String lastName;
 
     /**
-     * Номер моб.телефона
+     * Номер телефона
      */
     public String phoneNumber;
 
-
-    public String getFirstName() {
-        return firstName;
-    }
 }

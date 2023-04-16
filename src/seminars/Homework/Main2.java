@@ -11,6 +11,10 @@ public class Main2 {
                 PhoneBook phoneDataBook = new PhoneBook();
                 // Добавляем запись в справочник
                 phoneDataBook.addRecord(new PhoneData("Иван", "Петров", "8-987-654-32-10"));
+                phoneDataBook.addRecord(new PhoneData("Иван", "Петров", "8-123-456-78-90"));
+
+                // Печать телефонного справочника
+                phoneDataBook.printPhoneBook(phoneDataBook);
                 // Печать записи из телефонной книги
                 System.out.println("\n" + phoneDataBook.phoneDataBase);
                 // Отображение номера телефона по найденному абоненту:

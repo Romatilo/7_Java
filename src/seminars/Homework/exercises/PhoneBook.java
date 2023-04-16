@@ -5,20 +5,30 @@ package seminars.homework.exercises;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class PhoneBook {
-    public Map<String, PhoneData> phoneDataBase = new HashMap<>();
+    public static Map<String, PhoneData> phoneDataBase = new HashMap<>();
 
 
     /**
      * Метод для добавления записи в телефонную книгу
-     * @param pd Данные со всеми записями по данному человеку
+     * @param pd Данные с записями по данному человеку
      */
     public void addRecord(PhoneData pd){
-        // Приводим ключ к нижнему регистру, пробелы убираем за ненадобностью, т.к. все данные хранятся в классе PhoneData
+        // Приводим ключ к нижнему регистру
         phoneDataBase.putIfAbsent(pd.getFirstName().toLowerCase() + pd.lastName.toLowerCase(), pd);
         System.out.println(phoneDataBase);
     }
+
+    /**
+     * Метод печати телефонной книги
+     */
+    public static <phoneDataBase> void printPhoneBook(phoneDataBase pd) {
+        // Print keys
+        for (String i : phoneDataBase.keySet()) System.out.println(i);
+    }
+
 
     /**
      * Метод возвращает данные человека по Фамилии и Имени
