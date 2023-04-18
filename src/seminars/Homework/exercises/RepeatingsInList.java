@@ -7,7 +7,7 @@ package seminars.homework.exercises;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RepeatisInList {
+public class RepeatingsInList {
 
     private static String[] namesList = new String[]{
             "Иван Иванов",
@@ -35,21 +35,20 @@ public class RepeatisInList {
             "Иван Ежов"
     };
 
-    public static void Run() {
+    public static void getNamesList() {
         Map<String, Integer> repeatingNamesList = new HashMap<>();
-        for (String nameFull : namesList) {
+        for (String records : namesList) {
             // Выбираем имя из строки и приводим его к нижнему регистру
-            String firstName = nameFull.split(" ")[0].toLowerCase();
+            String firstName = records.split(" ")[0].toLowerCase();
             // Проверяем, встречалось ли имя раньше и если да - увеличиваем значение нашего хэшмэпа на 1.
-            if (repeatingNamesList(firstName, repeatingNamesList.get(firstName) == null){
+            if (repeatingNamesList.get(firstName) == null) {
                 repeatingNamesList.put(firstName, 1);
+            } else {
+                repeatingNamesList.put(firstName, +1);
             }
-            else { repeatingNamesList.get(firstName) + 1);}
+            System.out.println(repeatingNamesList);
 
 
-            if (count == null) {
-                map.put(temp, 1);
-            } else{
-                map.put(temp, count + 1);
-            }
+        }
+    }
 }

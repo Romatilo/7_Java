@@ -20,10 +20,7 @@ public class PhoneBook {
      */
     @Override
     public String toString() {
-        return "TempData{" +
-                "Phone'" + PhoneData.firstName + '\'' +
-                ", userLastName='" + PhoneData.surName + '\'' +
-                ", number='" + PhoneData.phoneNumber;
+        return String.format("%s %s %d", PhoneData.firstName, PhoneData.surName, PhoneData.phoneNumber);
     }
 
 
