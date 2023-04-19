@@ -3,10 +3,7 @@ package seminars.homework;
 
 import seminars.homework.exercises.PhoneBook;
 import seminars.homework.exercises.PhoneData;
-import seminars.homework.exercises.RepeatingInList;
 import seminars.homework.exercises.RepeatingsInList;
-
-import static seminars.homework.exercises.RepeatingInList.namesList;
 
 public class Main2 {
     public static void main(String[] args) {
@@ -21,7 +18,8 @@ public class Main2 {
         // Отображение номера телефона по найденному абоненту:
         System.out.println(phoneDataBook.getRecord("Иван", "Петров").phoneNumber);
 
-        RepeatingsInList getNamesList = RepeatingsInList.getNamesList();
+        /// Программа для нахождения и вывода (в порядке убывания количества повторений) повторяющиеся имен.
+        RepeatingsInList.getNamesList();
         }
 
     }

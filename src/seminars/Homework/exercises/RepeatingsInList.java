@@ -36,19 +36,27 @@ public class RepeatingsInList {
     };
 
     public static void getNamesList() {
-        Map<String, Integer> repeatingNamesList = new HashMap<>();
-        for (String records : namesList) {
+        Map<String, Integer> namesList = new HashMap<>();
+        for (String records : RepeatingsInList.namesList) {
             // Выбираем имя из строки и приводим его к нижнему регистру
             String firstName = records.split(" ")[0].toLowerCase();
-            // Проверяем, встречалось ли имя раньше и если да - увеличиваем значение нашего хэшмэпа на 1.
-            if (repeatingNamesList.get(firstName) == null) {
-                repeatingNamesList.put(firstName, 1);
+            // Считаем, сколько раз встречается каждое имя
+            if (namesList.get(firstName) == null) {
+                namesList.put(firstName, 1);
             } else {
-                repeatingNamesList.put(firstName, +1);
+                namesList.put(firstName, namesList.get(firstName) + 1);
             }
-            System.out.println(repeatingNamesList);
+        }
 
+        /// Уберем из HashMap все записи со значением "1"
+        while( namesList.values().remove(1) );
+
+        /// И выведем список имен в порядке убывания повторений
+        namesList.entrySet().stream()
+                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
+                .forEach(System.out::println);
 
         }
+
+
     }
-}
