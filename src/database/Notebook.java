@@ -1,5 +1,7 @@
 package database;
 
+import java.util.Random;
+
 public abstract class Notebook {
     String brand;
     String model;
@@ -30,5 +32,19 @@ public abstract class Notebook {
         this.color = c;
         this.price = p;
 
+    }
+}
+
+public enum Brand {
+    ACER, APPLE, ASUS, DELL, HP, HUAWEI, LENOVO, MSI, SAMSUNG, SONY, XIAOMI;
+
+    private static final Random PRNG = new Random();
+    private static final Brand[] brand = values();
+    public static Random randomDirection() {
+        return directions[PRNG.nextInt(directions.length)];
+    }
+    public static Direction randomDirection()  {
+        Direction[] directions = values();
+        return directions[PRNG.nextInt(directions.length)];
     }
 }
