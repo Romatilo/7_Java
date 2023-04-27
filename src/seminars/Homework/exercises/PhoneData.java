@@ -2,6 +2,19 @@ package seminars.homework.exercises;
 
 public class PhoneData {
 
+    /**
+     * Имя
+     */
+    public static String firstName;
+    /**
+     * Фамилия
+     */
+    public static String surName;
+    /**
+     * Номер телефона
+     */
+    public static String phoneNumber;
+
     public PhoneData(String initFirstName, String initSurName, String initPhoneNumber) {
 
         firstName = initFirstName;
@@ -11,18 +24,11 @@ public class PhoneData {
     }
 
     /**
-     * Имя
+     * Метод печати
      */
-    public static String firstName;
+    @Override
+    public String toString() {
+        return String.format("%s %s %d", PhoneData.firstName, PhoneData.surName, PhoneData.phoneNumber);
 
-    /**
-     * Фамилия
-     */
-    public static String surName;
-
-    /**
-     * Номер телефона
-     */
-    public static String phoneNumber;
-
+    }
 }

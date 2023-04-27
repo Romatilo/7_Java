@@ -13,7 +13,7 @@ public class GoodTimeOfTheDay {
         System.out.println("Привет, " + userName);
         LocalDateTime now = LocalDateTime.now();
         if (now.isAfter(ChronoLocalDateTime.from(LocalTime.of(5, 0))) &&
-                now.isBefore(ChronoLocalDateTime.from(LocalTime.of(11, 59)))){
+                now.isBefore(ChronoLocalDateTime.from(LocalTime.of(11, 59)))) {
             System.out.println("Доброе утро" + userName);
         } else if (now.isAfter(ChronoLocalDateTime.from(LocalTime.of(12, 0))) &&
                 now.isBefore(ChronoLocalDateTime.from(LocalTime.of(17, 59)))) {

@@ -49,14 +49,13 @@ public class RepeatingsInList {
         }
 
         /// Уберем из HashMap все записи со значением "1"
-        while( namesList.values().remove(1) );
+        while (namesList.values().remove(1)) ;
 
         /// И выведем список имен в порядке убывания повторений
         namesList.entrySet().stream()
                 .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
                 .forEach(System.out::println);
 
-        }
-
-
     }
+
+}

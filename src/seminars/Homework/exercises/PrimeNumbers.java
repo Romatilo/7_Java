@@ -6,15 +6,14 @@ package seminars.homework.exercises;
 public class PrimeNumbers {
 
     /// Метод проверки числа на простоту
-    public static boolean isPrime(int checkNumber)
-    {
-        for (int i = 2; i < checkNumber; i++)
-        {
+    public static boolean isPrime(int checkNumber) {
+        for (int i = 2; i < checkNumber; i++) {
             if (checkNumber % i == 0)
                 return false;
         }
         return true;
     }
+
     /// Метод вывода в терминал простых числе в промежутке 2..N
     public static void printPrimeNumbers(int number) {
         for (int i = 2; i <= number; i++) {

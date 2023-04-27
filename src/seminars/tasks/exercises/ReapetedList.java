@@ -4,10 +4,10 @@
 package seminars.tasks.exercises;
 
 public class ReapetedList {
-    public static String getRepeatString(int numN){
+    public static String getRepeatString(int numN) {
         StringBuilder sb = new StringBuilder();
         sb.append("c1");
-        for(int i = 0; i < numN; i++){
+        for (int i = 0; i < numN; i++) {
             if (i % 2 == 0) sb.append("c2");
             else sb.append("c1");
         }

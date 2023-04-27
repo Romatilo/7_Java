@@ -3,6 +3,7 @@
 package seminars.homework.exercises;
 
 import java.util.Scanner;
+
 public class Calculator {
 
     /// Метод ввода числа double

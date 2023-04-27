@@ -13,20 +13,20 @@ public class MinMidMaxNumber {
 
     ///Метод отображения минимального, максимального и среднего чисел в массиве
     public static void showMinMaxMid(int[] minMax, int[] array) {
-        int half =  (minMax[0]+minMax[1])/2;  //Сначала найдем среднее значение между минимальным и максимальным элементами
+        int half = (minMax[0] + minMax[1]) / 2;  //Сначала найдем среднее значение между минимальным и максимальным элементами
         int midNumber = minMax[0]; //Присвоим для начала среднему числу из массива значение минимального числа
         //Можно было присвоить ему также первое число из исходного массива, разницы нет совсем.
         int difference = Math.abs(minMax[0] - half); //Переменная difference будет хранить разницу (по модулю) между
-                                                     // текущим средним элементом и срединным значением.
+        // текущим средним элементом и срединным значением.
         ///Цикл для нахождения среднего числа в исходном массиве
-        for (int i = 1; i < array.length ; i++) {
-            if (Math.abs(array[i]-half) < difference){
+        for (int i = 1; i < array.length; i++) {
+            if (Math.abs(array[i] - half) < difference) {
                 midNumber = array[i];
-                difference = Math.abs(array[i]-half);
+                difference = Math.abs(array[i] - half);
             }
         }
         System.out.println("Минимальное число:  " + minMax[0] +
-                           "\nСреднее число:      " + midNumber +
-                           "\nМаксимальное число: " + minMax[1]);
+                "\nСреднее число:      " + midNumber +
+                "\nМаксимальное число: " + minMax[1]);
     }
 }
