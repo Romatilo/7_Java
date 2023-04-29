@@ -1,25 +1,28 @@
 package certification.notebook;
 
 
-import java.util.LinkedList;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class Options {
 
-    //    Create random Notebooks database
-    public static LinkedList dataBase() {
-        LinkedList<Notebook> notebookDataBase = new LinkedList<>();
-        int notebooksAmount = 10;
+    //    Create random Notebooks database using HashSet
+    public static Set dataBase() {
+        Set<Notebook> notebookDataBase = new HashSet<>();
+        int notebooksAmount = 50;
         for (int i = 0; i < notebooksAmount; i++) {
             notebookDataBase.add(new Notebook(BrandPick.getRandomBrand(), getRandomModel(), getRandomRam(),
-                    + getRandomHdd(), ColorPick.getRandomColor(), OpSysPick.getRandomOpSys(), getRandomPrice()));
+                    +getRandomHdd(), ColorPick.getRandomColor(), OpSysPick.getRandomOpSys(), getRandomPrice()));
         }
-
         return notebookDataBase;
     }
 
+    /**
+     * Notebook available brands
+     */
     enum BrandPick {
-        Acer, Apple, ASUS, Dell, HP, Lenovo, Samsung, Sony, Xiaomi;
+        Acer, Apple, ASUS, Dell, DNS, HP, Lenovo, MSI, Samsung, Sony, Xiaomi;
 
         /**
          * Pick a random value of the BrandPick enum.
@@ -48,6 +51,7 @@ public class Options {
             return values()[random.nextInt(values().length)];
         }
     }
+
     /**
      * Notebook available Operational systems
      */
@@ -71,8 +75,7 @@ public class Options {
     public static StringBuilder getRandomModel() {
         int modelNameLength = 5;
         StringBuilder randomModel = new StringBuilder(modelNameLength);
-        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                + "0123456789";
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         for (int i = 0; i < modelNameLength; i++) {
             Random r = new Random();
             char c = alphabet.charAt(r.nextInt(alphabet.length()));
@@ -105,6 +108,7 @@ public class Options {
 
         return randomHdd;
     }
+
     /**
      * Notebook random price in a given interval
      */
@@ -115,6 +119,46 @@ public class Options {
         int randomPrice = r.nextInt(minPrice, maxPrice);
 
         return randomPrice;
+    }
+
+    /**
+     * Search by brand of manufacturer
+     * @param brand
+     */
+    public void searchByBrand(String brand) {
+        for (Object notebookItem : Options.dataBase()) {
+            if (notebookItem.toString().toLowerCase().contains(brand.toLowerCase()))
+                System.out.println(notebookItem.toString());
+        }
+    }
+    public Boolean searchByRam (Integer minRam, Integer maxRam) {
+
+
+        for (Object notebookItem : Options.dataBase()) {
+            return notebookItem.get(ram) >= minRam && randomRam <= maxRam;
+        }
+    }
+
+    /**
+     * Search by notebook color (OS)
+     * @param color
+     */
+    public void searchByColor(String color) {
+        for (Object notebookItem : Options.dataBase()) {
+            if (notebookItem.toString().toLowerCase().contains(color.toLowerCase()))
+                System.out.println(notebookItem.toString());
+        }
+    }
+
+    /**
+     * Search by Operating system (OS)
+     * @param os
+     */
+    public void searchByOS(String os) {
+        for (Object notebookItem : Options.dataBase()) {
+            if (notebookItem.toString().toLowerCase().contains(os.toLowerCase()))
+                System.out.println(notebookItem.toString());
+        }
     }
 }
 

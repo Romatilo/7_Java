@@ -16,17 +16,19 @@ package certification.notebook;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.*;
 
 public class Notebook {
     private Options.BrandPick brand;    // Бренд ноутбука
-    private StringBuilder model;    // Модель ноутбука
+    private StringBuilder model;        // Модель ноутбука
     private int ram;         // Объем оперативной памяти
     private int hdd;         // Объем жесткого диска
     private Options.ColorPick color;    // Цвет ноутбука
-    private Options.OpSysPick opSys;    // операционная система
-    private double price;    // цена ноутбука
+    private Options.OpSysPick opSys;    // Операционная система
+    private double price;    // Цена ноутбука
 
-    public Notebook(Options.BrandPick brand, StringBuilder model, int ram, int hdd, Options.ColorPick color, Options.OpSysPick opSys, int price) {
+    public Notebook(Options.BrandPick brand, StringBuilder model, int ram, int hdd,
+                    Options.ColorPick color, Options.OpSysPick opSys, int price) {
         this.brand = brand;
         this.model = model;
         this.ram = ram;
@@ -38,7 +40,7 @@ public class Notebook {
 
     @Override
     public String toString() {
-        return "\nNotebook{" +
+        return "\nNotebook [" +
                 brand + " " +
                 model + ", " +
                 "RAM " + ram + " GB, " +
@@ -46,7 +48,7 @@ public class Notebook {
                 color + ", " +
                 opSys +
                 ", Price: " + price + " rub." +
-                '}';
+                ']';
     }
 
     public static List<String> filterCriteria() {
@@ -63,51 +65,3 @@ public class Notebook {
 
     }
 }
-
-
-//    /**
-//     * Поиск по Бренду ноутбука
-//     *
-//     * @param inBrand
-//     * @return
-//     */
-//    public Boolean isMatchBrand(String brand) {
-//        return findStr(brand, inBrand);
-//    }
-//
-//    /**
-//     * Поиск по ОС
-//     *
-//     * @param inOS
-//     * @return
-//     */
-//    public Boolean isMatchOSType(String inOS) {
-//        return findStr(opSys, inOS);
-//    }
-//
-//    /**
-//     * Поиск по цене
-//     *
-//     * @param minPrice Минимальная цена
-//     * @param maxPrice Максимальная цена
-//     * @return
-//     */
-//    public Boolean isMatchPrice(Double minPrice, Double maxPrice) {
-//        return price >= minPrice && price <= maxPrice;
-//    }
-//
-//    /**
-//     * Поиск по объему ОЗУ
-//     *
-//     * @param minRAM Минимальная граница
-//     * @param maxRAM Максимальная граница
-//     * @return
-//     */
-//    public Boolean isMatchRam(Integer minRAM, Integer maxRAM) {
-//        return volRAM >= minRAM && volRAM <= maxRAM;
-//    }
-//
-//
-
-//
-//}
