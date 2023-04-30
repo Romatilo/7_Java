@@ -16,7 +16,7 @@ package certification.notebook;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.*;
+
 
 public class Notebook {
     private Options.BrandPick brand;    // Бренд ноутбука
@@ -25,7 +25,7 @@ public class Notebook {
     private int hdd;         // Объем жесткого диска
     private Options.ColorPick color;    // Цвет ноутбука
     private Options.OpSysPick opSys;    // Операционная система
-    private double price;    // Цена ноутбука
+    private int price;    // Цена ноутбука
 
     public Notebook(Options.BrandPick brand, StringBuilder model, int ram, int hdd,
                     Options.ColorPick color, Options.OpSysPick opSys, int price) {

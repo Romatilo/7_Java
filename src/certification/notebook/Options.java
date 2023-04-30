@@ -1,22 +1,9 @@
 package certification.notebook;
 
 
-import java.util.HashSet;
 import java.util.Random;
-import java.util.Set;
 
 public class Options {
-
-    //    Create random Notebooks database using HashSet
-    public static Set dataBase() {
-        Set<Notebook> notebookDataBase = new HashSet<>();
-        int notebooksAmount = 50;
-        for (int i = 0; i < notebooksAmount; i++) {
-            notebookDataBase.add(new Notebook(BrandPick.getRandomBrand(), getRandomModel(), getRandomRam(),
-                    +getRandomHdd(), ColorPick.getRandomColor(), OpSysPick.getRandomOpSys(), getRandomPrice()));
-        }
-        return notebookDataBase;
-    }
 
     /**
      * Notebook available brands
@@ -121,44 +108,5 @@ public class Options {
         return randomPrice;
     }
 
-    /**
-     * Search by brand of manufacturer
-     * @param brand
-     */
-    public void searchByBrand(String brand) {
-        for (Object notebookItem : Options.dataBase()) {
-            if (notebookItem.toString().toLowerCase().contains(brand.toLowerCase()))
-                System.out.println(notebookItem.toString());
-        }
-    }
-    public Boolean searchByRam (Integer minRam, Integer maxRam) {
-
-
-        for (Object notebookItem : Options.dataBase()) {
-            return notebookItem.get(ram) >= minRam && randomRam <= maxRam;
-        }
-    }
-
-    /**
-     * Search by notebook color (OS)
-     * @param color
-     */
-    public void searchByColor(String color) {
-        for (Object notebookItem : Options.dataBase()) {
-            if (notebookItem.toString().toLowerCase().contains(color.toLowerCase()))
-                System.out.println(notebookItem.toString());
-        }
-    }
-
-    /**
-     * Search by Operating system (OS)
-     * @param os
-     */
-    public void searchByOS(String os) {
-        for (Object notebookItem : Options.dataBase()) {
-            if (notebookItem.toString().toLowerCase().contains(os.toLowerCase()))
-                System.out.println(notebookItem.toString());
-        }
-    }
 }
 
